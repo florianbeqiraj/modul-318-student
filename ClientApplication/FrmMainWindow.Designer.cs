@@ -30,8 +30,8 @@
         {
             this.lblStartLocation = new System.Windows.Forms.Label();
             this.lblDestinationLocation = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbStartLocation = new System.Windows.Forms.ComboBox();
+            this.cmbDestinationLocation = new System.Windows.Forms.ComboBox();
             this.ltvConnections = new System.Windows.Forms.ListView();
             this.clmStartStation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmDepartureTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -65,25 +65,34 @@
             this.lblDestinationLocation.TabIndex = 0;
             this.lblDestinationLocation.Text = "Destinatinon Location:";
             // 
-            // comboBox1
+            // cmbStartLocation
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(174, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(218, 24);
-            this.comboBox1.TabIndex = 2;
+            this.cmbStartLocation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbStartLocation.FormattingEnabled = true;
+            this.cmbStartLocation.Location = new System.Drawing.Point(174, 32);
+            this.cmbStartLocation.Name = "cmbStartLocation";
+            this.cmbStartLocation.Size = new System.Drawing.Size(218, 24);
+            this.cmbStartLocation.TabIndex = 2;
+            this.cmbStartLocation.TextUpdate += new System.EventHandler(this.CmbStartLocation_TextUpdate);
             // 
-            // comboBox2
+            // cmbDestinationLocation
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(174, 63);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(218, 24);
-            this.comboBox2.TabIndex = 3;
+            this.cmbDestinationLocation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbDestinationLocation.FormattingEnabled = true;
+            this.cmbDestinationLocation.Location = new System.Drawing.Point(174, 63);
+            this.cmbDestinationLocation.Name = "cmbDestinationLocation";
+            this.cmbDestinationLocation.Size = new System.Drawing.Size(218, 24);
+            this.cmbDestinationLocation.TabIndex = 3;
+            this.cmbDestinationLocation.TextUpdate += new System.EventHandler(this.CmbDestinationLocation_TextUpdate);
             // 
             // ltvConnections
             // 
             this.ltvConnections.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.ltvConnections.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ltvConnections.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmStartStation,
             this.clmDepartureTime,
@@ -129,6 +138,8 @@
             // 
             // dtpTime
             // 
+            this.dtpTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtpTime.Location = new System.Drawing.Point(147, 31);
             this.dtpTime.Name = "dtpTime";
@@ -137,10 +148,12 @@
             // 
             // grbLocation
             // 
+            this.grbLocation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grbLocation.Controls.Add(this.lblStartLocation);
             this.grbLocation.Controls.Add(this.lblDestinationLocation);
-            this.grbLocation.Controls.Add(this.comboBox1);
-            this.grbLocation.Controls.Add(this.comboBox2);
+            this.grbLocation.Controls.Add(this.cmbStartLocation);
+            this.grbLocation.Controls.Add(this.cmbDestinationLocation);
             this.grbLocation.Location = new System.Drawing.Point(12, 12);
             this.grbLocation.Name = "grbLocation";
             this.grbLocation.Size = new System.Drawing.Size(409, 114);
@@ -150,6 +163,7 @@
             // 
             // grbTime
             // 
+            this.grbTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.grbTime.Controls.Add(this.rdbArrival);
             this.grbTime.Controls.Add(this.rdbDeparture);
             this.grbTime.Controls.Add(this.chbSpecifyTime);
@@ -196,12 +210,14 @@
             // 
             // btnSearch
             // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.Location = new System.Drawing.Point(574, 132);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(161, 33);
             this.btnSearch.TabIndex = 9;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // FrmMainWindow
             // 
@@ -224,8 +240,8 @@
 
         private System.Windows.Forms.Label lblStartLocation;
         private System.Windows.Forms.Label lblDestinationLocation;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbStartLocation;
+        private System.Windows.Forms.ComboBox cmbDestinationLocation;
         private System.Windows.Forms.ListView ltvConnections;
         private System.Windows.Forms.ColumnHeader clmStartStation;
         private System.Windows.Forms.ColumnHeader clmDepartureTime;

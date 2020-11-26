@@ -1,6 +1,6 @@
 ﻿namespace SwissTransport
 {
-    public interface ITransport
+    public interface ITransportHandler
     {
         Stations GetStations(string query);
         StationBoardRoot GetStationBoard(string station, string id);
