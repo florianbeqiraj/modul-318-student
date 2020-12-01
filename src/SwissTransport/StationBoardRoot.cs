@@ -32,11 +32,18 @@ namespace SwissTransport
 
         [JsonProperty("stop")]
         public Stop Stop { get; set; }
+
+        [JsonProperty("passList")]
+        public List<Pass> Passes { get; set; }
+
     }
 
     public class Stop
     {
         [JsonProperty("departure")]
         public DateTime Departure { get; set; }
+
+        [JsonProperty("station")]
+        public Station Station { get; set; }
     }
 }

@@ -38,4 +38,31 @@ namespace SwissTransport
         [JsonProperty("stations")]
         public List<Station> StationList { get; set; }
     }
+
+    public class Section
+    {
+        [JsonProperty("journey")]
+        public Journey Journey { get; set; }
+    }
+
+    public class Journey
+    {
+        [JsonProperty("to")]
+        public string To { get; set; }
+
+        [JsonProperty("passList")]
+        public List<Pass> Passes { get; set; }
+    }
+
+    public class Pass
+    {
+        [JsonProperty("station")]
+        public Station Station { get; set; }
+
+        [JsonProperty("arrival")]
+        public string Arrival { get; set; }
+
+        [JsonProperty("departure")]
+        public string Departure { get; set; }
+    }
 }

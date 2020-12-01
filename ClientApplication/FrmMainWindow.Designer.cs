@@ -72,8 +72,8 @@
             this.cmbStartLocation.FormattingEnabled = true;
             this.cmbStartLocation.Location = new System.Drawing.Point(174, 32);
             this.cmbStartLocation.Name = "cmbStartLocation";
-            this.cmbStartLocation.Size = new System.Drawing.Size(218, 24);
-            this.cmbStartLocation.TabIndex = 2;
+            this.cmbStartLocation.Size = new System.Drawing.Size(287, 24);
+            this.cmbStartLocation.TabIndex = 0;
             this.cmbStartLocation.TextUpdate += new System.EventHandler(this.CmbStartLocation_TextUpdate);
             // 
             // cmbDestinationLocation
@@ -83,8 +83,8 @@
             this.cmbDestinationLocation.FormattingEnabled = true;
             this.cmbDestinationLocation.Location = new System.Drawing.Point(174, 63);
             this.cmbDestinationLocation.Name = "cmbDestinationLocation";
-            this.cmbDestinationLocation.Size = new System.Drawing.Size(218, 24);
-            this.cmbDestinationLocation.TabIndex = 3;
+            this.cmbDestinationLocation.Size = new System.Drawing.Size(287, 24);
+            this.cmbDestinationLocation.TabIndex = 1;
             this.cmbDestinationLocation.TextUpdate += new System.EventHandler(this.CmbDestinationLocation_TextUpdate);
             // 
             // ltvConnections
@@ -103,10 +103,10 @@
             this.ltvConnections.FullRowSelect = true;
             this.ltvConnections.GridLines = true;
             this.ltvConnections.HideSelection = false;
-            this.ltvConnections.Location = new System.Drawing.Point(12, 171);
+            this.ltvConnections.Location = new System.Drawing.Point(12, 178);
             this.ltvConnections.Name = "ltvConnections";
-            this.ltvConnections.Size = new System.Drawing.Size(723, 228);
-            this.ltvConnections.TabIndex = 5;
+            this.ltvConnections.Size = new System.Drawing.Size(858, 263);
+            this.ltvConnections.TabIndex = 4;
             this.ltvConnections.UseCompatibleStateImageBehavior = false;
             this.ltvConnections.View = System.Windows.Forms.View.Details;
             this.ltvConnections.SelectedIndexChanged += new System.EventHandler(this.LtvConnections_SelectedIndexChanged);
@@ -134,7 +134,7 @@
             // clmDuration
             // 
             this.clmDuration.Text = "Duration";
-            this.clmDuration.Width = 100;
+            this.clmDuration.Width = 150;
             // 
             // dtpTime
             // 
@@ -143,8 +143,8 @@
             this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtpTime.Location = new System.Drawing.Point(147, 31);
             this.dtpTime.Name = "dtpTime";
-            this.dtpTime.Size = new System.Drawing.Size(139, 22);
-            this.dtpTime.TabIndex = 6;
+            this.dtpTime.Size = new System.Drawing.Size(195, 22);
+            this.dtpTime.TabIndex = 3;
             // 
             // grbLocation
             // 
@@ -156,8 +156,8 @@
             this.grbLocation.Controls.Add(this.cmbDestinationLocation);
             this.grbLocation.Location = new System.Drawing.Point(12, 12);
             this.grbLocation.Name = "grbLocation";
-            this.grbLocation.Size = new System.Drawing.Size(409, 114);
-            this.grbLocation.TabIndex = 7;
+            this.grbLocation.Size = new System.Drawing.Size(488, 121);
+            this.grbLocation.TabIndex = 0;
             this.grbLocation.TabStop = false;
             this.grbLocation.Text = "Location";
             // 
@@ -168,10 +168,10 @@
             this.grbTime.Controls.Add(this.rdbDeparture);
             this.grbTime.Controls.Add(this.chbSpecifyTime);
             this.grbTime.Controls.Add(this.dtpTime);
-            this.grbTime.Location = new System.Drawing.Point(427, 12);
+            this.grbTime.Location = new System.Drawing.Point(506, 12);
             this.grbTime.Name = "grbTime";
-            this.grbTime.Size = new System.Drawing.Size(308, 114);
-            this.grbTime.TabIndex = 8;
+            this.grbTime.Size = new System.Drawing.Size(364, 121);
+            this.grbTime.TabIndex = 1;
             this.grbTime.TabStop = false;
             this.grbTime.Text = "Time";
             // 
@@ -181,7 +181,7 @@
             this.rdbArrival.Location = new System.Drawing.Point(128, 66);
             this.rdbArrival.Name = "rdbArrival";
             this.rdbArrival.Size = new System.Drawing.Size(69, 21);
-            this.rdbArrival.TabIndex = 11;
+            this.rdbArrival.TabIndex = 5;
             this.rdbArrival.TabStop = true;
             this.rdbArrival.Text = "Arrival";
             this.rdbArrival.UseVisualStyleBackColor = true;
@@ -192,7 +192,7 @@
             this.rdbDeparture.Location = new System.Drawing.Point(12, 66);
             this.rdbDeparture.Name = "rdbDeparture";
             this.rdbDeparture.Size = new System.Drawing.Size(93, 21);
-            this.rdbDeparture.TabIndex = 10;
+            this.rdbDeparture.TabIndex = 4;
             this.rdbDeparture.TabStop = true;
             this.rdbDeparture.Text = "Departure";
             this.rdbDeparture.UseVisualStyleBackColor = true;
@@ -203,32 +203,34 @@
             this.chbSpecifyTime.Location = new System.Drawing.Point(12, 31);
             this.chbSpecifyTime.Name = "chbSpecifyTime";
             this.chbSpecifyTime.Size = new System.Drawing.Size(115, 21);
-            this.chbSpecifyTime.TabIndex = 9;
-            this.chbSpecifyTime.Text = "Specify Time:";
+            this.chbSpecifyTime.TabIndex = 2;
+            this.chbSpecifyTime.Text = "Specify &Time:";
             this.chbSpecifyTime.UseVisualStyleBackColor = true;
             this.chbSpecifyTime.CheckedChanged += new System.EventHandler(this.ChbSpecifyTime_CheckedChanged);
             // 
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(574, 132);
+            this.btnSearch.Location = new System.Drawing.Point(709, 139);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(161, 33);
-            this.btnSearch.TabIndex = 9;
-            this.btnSearch.Text = "Search";
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "&Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // FrmMainWindow
             // 
+            this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 410);
+            this.ClientSize = new System.Drawing.Size(882, 453);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.grbTime);
             this.Controls.Add(this.grbLocation);
             this.Controls.Add(this.ltvConnections);
             this.Name = "FrmMainWindow";
+            this.Load += new System.EventHandler(this.FrmMainWindow_Load);
             this.grbLocation.ResumeLayout(false);
             this.grbTime.ResumeLayout(false);
             this.grbTime.PerformLayout();
