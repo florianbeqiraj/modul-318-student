@@ -9,10 +9,10 @@ namespace SwissTransport
         public string Type { get; set; }
 
         [JsonProperty("x")]
-        public double XCoordinate { get; set; }
+        public double? XCoordinate { get; set; }
 
         [JsonProperty("y")]
-        public double YCoordinate { get; set; }
+        public double? YCoordinate { get; set; }
     }
 
     public class Station
@@ -39,12 +39,18 @@ namespace SwissTransport
         public List<Station> StationList { get; set; }
     }
 
+    /// <summary>
+    /// Added a Section class for better mapping and more information from the API.
+    /// </summary>
     public class Section
     {
         [JsonProperty("journey")]
         public Journey Journey { get; set; }
     }
 
+    /// <summary>
+    /// Added a Journey class for better mapping and more information from the API.
+    /// </summary>
     public class Journey
     {
         [JsonProperty("to")]
@@ -54,6 +60,9 @@ namespace SwissTransport
         public List<Pass> Passes { get; set; }
     }
 
+    /// <summary>
+    /// Added a Pass class for better mapping and more information from the API.
+    /// </summary>
     public class Pass
     {
         [JsonProperty("station")]

@@ -40,6 +40,7 @@
             this.lblDuration = new System.Windows.Forms.Label();
             this.grbDetails = new System.Windows.Forms.GroupBox();
             this.pnlConnectionHistory = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.grbDetails.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,7 +84,7 @@
             // 
             this.lblDepartureTimeAttribute.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDepartureTimeAttribute.AutoSize = true;
-            this.lblDepartureTimeAttribute.Location = new System.Drawing.Point(350, 33);
+            this.lblDepartureTimeAttribute.Location = new System.Drawing.Point(330, 33);
             this.lblDepartureTimeAttribute.Name = "lblDepartureTimeAttribute";
             this.lblDepartureTimeAttribute.Size = new System.Drawing.Size(111, 17);
             this.lblDepartureTimeAttribute.TabIndex = 4;
@@ -93,7 +94,7 @@
             // 
             this.lblArrivalTimeAttribute.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblArrivalTimeAttribute.AutoSize = true;
-            this.lblArrivalTimeAttribute.Location = new System.Drawing.Point(350, 64);
+            this.lblArrivalTimeAttribute.Location = new System.Drawing.Point(330, 64);
             this.lblArrivalTimeAttribute.Name = "lblArrivalTimeAttribute";
             this.lblArrivalTimeAttribute.Size = new System.Drawing.Size(87, 17);
             this.lblArrivalTimeAttribute.TabIndex = 5;
@@ -104,7 +105,7 @@
             this.lblArrivalTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblArrivalTime.AutoSize = true;
             this.lblArrivalTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArrivalTime.Location = new System.Drawing.Point(493, 64);
+            this.lblArrivalTime.Location = new System.Drawing.Point(474, 64);
             this.lblArrivalTime.Name = "lblArrivalTime";
             this.lblArrivalTime.Size = new System.Drawing.Size(0, 17);
             this.lblArrivalTime.TabIndex = 7;
@@ -114,7 +115,7 @@
             this.lblDepartureTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDepartureTime.AutoSize = true;
             this.lblDepartureTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartureTime.Location = new System.Drawing.Point(493, 33);
+            this.lblDepartureTime.Location = new System.Drawing.Point(474, 33);
             this.lblDepartureTime.Name = "lblDepartureTime";
             this.lblDepartureTime.Size = new System.Drawing.Size(0, 17);
             this.lblDepartureTime.TabIndex = 6;
@@ -122,7 +123,7 @@
             // lblDurationAttribute
             // 
             this.lblDurationAttribute.AutoSize = true;
-            this.lblDurationAttribute.Location = new System.Drawing.Point(15, 115);
+            this.lblDurationAttribute.Location = new System.Drawing.Point(15, 114);
             this.lblDurationAttribute.Name = "lblDurationAttribute";
             this.lblDurationAttribute.Size = new System.Drawing.Size(66, 17);
             this.lblDurationAttribute.TabIndex = 8;
@@ -132,7 +133,7 @@
             // 
             this.lblDuration.AutoSize = true;
             this.lblDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDuration.Location = new System.Drawing.Point(167, 115);
+            this.lblDuration.Location = new System.Drawing.Point(167, 114);
             this.lblDuration.Name = "lblDuration";
             this.lblDuration.Size = new System.Drawing.Size(0, 17);
             this.lblDuration.TabIndex = 9;
@@ -152,8 +153,10 @@
             this.grbDetails.Controls.Add(this.lblDepartureTimeAttribute);
             this.grbDetails.Controls.Add(this.lblArrivalTimeAttribute);
             this.grbDetails.Location = new System.Drawing.Point(12, 12);
+            this.grbDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbDetails.Name = "grbDetails";
-            this.grbDetails.Size = new System.Drawing.Size(678, 151);
+            this.grbDetails.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbDetails.Size = new System.Drawing.Size(658, 151);
             this.grbDetails.TabIndex = 10;
             this.grbDetails.TabStop = false;
             this.grbDetails.Text = "Details";
@@ -164,21 +167,39 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlConnectionHistory.AutoScroll = true;
-            this.pnlConnectionHistory.Location = new System.Drawing.Point(12, 169);
+            this.pnlConnectionHistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlConnectionHistory.Location = new System.Drawing.Point(78, 167);
+            this.pnlConnectionHistory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlConnectionHistory.Name = "pnlConnectionHistory";
-            this.pnlConnectionHistory.Size = new System.Drawing.Size(678, 422);
+            this.pnlConnectionHistory.Size = new System.Drawing.Size(592, 593);
             this.pnlConnectionHistory.TabIndex = 11;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.Location = new System.Drawing.Point(570, 765);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(100, 26);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = "&Close";
+            this.btnClose.UseVisualStyleBackColor = true;
             // 
             // FrmConnectionDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 603);
+            this.CancelButton = this.btnClose;
+            this.ClientSize = new System.Drawing.Size(682, 803);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pnlConnectionHistory);
             this.Controls.Add(this.grbDetails);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmConnectionDetails";
             this.Text = "Connection Details";
             this.Load += new System.EventHandler(this.FrmConnectionDetails_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FrmConnectionDetails_Paint);
             this.grbDetails.ResumeLayout(false);
             this.grbDetails.PerformLayout();
             this.ResumeLayout(false);
@@ -199,5 +220,6 @@
         private System.Windows.Forms.Label lblDuration;
         private System.Windows.Forms.GroupBox grbDetails;
         private System.Windows.Forms.Panel pnlConnectionHistory;
+        private System.Windows.Forms.Button btnClose;
     }
 }

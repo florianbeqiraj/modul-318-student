@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DisplayConnections.cs" />
     <Compile Include="FrmConnectionDetails.cs">
       <SubType>Form</SubType>
     </Compile>
